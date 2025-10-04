@@ -1,5 +1,6 @@
-const express = require('express');
-const { protect, adminOnly } = require('../middleware/authMiddleware');
+import express from 'express';
+import { protect, adminOnly } from '../middleware/authMiddleware.js';
+
 
 const router = express.Router();
 
@@ -8,4 +9,5 @@ router.get('/dashboard', protect, adminOnly, (req, res) => {
     res.json({ message: "Welcome to the admin dashboard" });
 });
 
-module.exports = router;
+export default router;
+

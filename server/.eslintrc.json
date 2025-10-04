@@ -1,0 +1,13 @@
+{
+    "env": {
+        "node": true, 
+        "es2021": true
+    },
+    "parserOptions": {
+        "sourceType": "module" 
+    },
+    "rules": {
+        // Solución para las variables de error en los catch blocks
+        "no-shadow": ["error", { "allow": ["error", "err"] }] 
+    }
+}

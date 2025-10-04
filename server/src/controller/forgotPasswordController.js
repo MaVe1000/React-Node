@@ -37,11 +37,13 @@
 
 // module.exports = { forgotPassword };
 
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
-const nodemailer = require("nodemailer");
-const User = require("../models/User"); 
-require("dotenv").config();
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import nodemailer from "nodemailer";
+import User from "../models/User.js";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const SECRET_KEY = process.env.JWT_SECRET;
 
@@ -158,4 +160,5 @@ const forgotPassword = async (req, res) => {
     }
   };
   
-module.exports = { forgotPassword, resetPassword };
+export { forgotPassword, resetPassword };
+
